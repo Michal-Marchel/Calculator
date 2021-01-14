@@ -1,7 +1,15 @@
+let inputValue = document.getElementById("inputValue");
+let botones = document.getElementsByClassName("button");
+let display = document.getElementById("topDiv");
+let number1 = "";
+let number2 = "";
+let op = "";
 
+//Sum of two arguments.
 function add(a, b) {
     return a + b;
 }
+
 
 function substract(a, b) {
     return a - b;
@@ -14,18 +22,134 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b;
 }
-
-function operate(a, b, c) {
-    if (c == "+") {
-         add(a, b);
-    }
-    if (c == "-") {
-        return substract(a, b);
-    }
-    if (c == "*") {
-        return multiply(a, b);
-    }
-    if (c == "/") {
-        return divide(a, b);
-    }
+// Takes 3 arguments (left digit, right digit, function), entablish inputValue.value as the result of the function over both digits.
+function operate(left,right, operation) {
+    display.innerHTML = operation(left,right);
 }
+
+//Concat string
+function concatDigits(digito) {
+    inputValue.innerHTML = number1 += digito;
+}
+
+
+function changeToSum(){
+    op = add;
+    display.innerHTML = number1;
+    number2 = number1;
+    number1 = "";
+    inputValue.innerHTML = "";
+}
+
+function result(){
+    operate(parseFloat(number2), parseFloat(number1), op);
+    number1 = "";
+    number2 = "";
+    inputValue.innerHTML = "";
+}
+
+function changeToSub(){
+    op = substract;
+    display.innerHTML = number1;
+    number2 = number1;
+    number1 = "";
+    inputValue.innerHTML = "";
+}
+
+function changeToDivide(){
+    op = divide;
+    display.innerHTML = number1;
+    number2 = number1;
+    number1 = "";
+    inputValue.innerHTML = "";
+}
+
+function changeToMultiply(){
+    op = multiply;
+    display.innerHTML = number1;
+    number2 = number1;
+    number1 = "";
+    inputValue.innerHTML = "";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

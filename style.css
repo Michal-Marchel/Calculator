@@ -8,7 +8,9 @@ h1 {
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
     gap: 2px 2px;
     grid-template-areas:
+      "result2 result2 result2 result2"
       "Result Result Result Result"
+      "number number number number"
       "number number number number"
       "number number number number"
       "number number number number"
@@ -17,11 +19,18 @@ h1 {
       margin-right: 30%;
   }
   
+  .result2 {
+       grid-area: result2; 
+       text-align: right;
+    }
   .Result { 
     grid-area: Result;
     text-align: right;
-
 }
+.A\\\/C { grid-area: A\\\/C; }
+.\\\+\\\/- { grid-area: \\\+\\\/-; }
+.\\\% { grid-area: \\\%; }
+.\\\/ { grid-area: \\\/; }
   
   
   

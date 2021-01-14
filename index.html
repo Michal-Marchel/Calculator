@@ -9,55 +9,29 @@
 <body>
     <h1>Calculator</h1>
     <div class="grid-container">
-        <input value = "" placeholder="0" class="Result"/>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>x</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>&minus;</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>&plus;</button>
-        <button>0</button>
-        <button>,</button>
-        <button>C</button>
-        <button>=</button>
+        <div id="topDiv" class="result2"></div>
+        <div value = "" id="inputValue" class="Result">0</div>
+        <button class="button">A/C</button>
+        <button class="button" >+/-</button>
+        <button class="button">%</button>
+        <button class="button" onclick="changeToDivide()">/</button>
+        <button class="button" onclick="concatDigits('7')">7</button>
+        <button class="button" onclick="concatDigits('8')">8</button>
+        <button class="button" onclick="concatDigits('9')">9</button>
+        <button class="button" onclick="changeToMultiply()">x</button>
+        <button class="button" onclick="concatDigits('4')">4</button>
+        <button class="button" onclick="concatDigits('5')">5</button>
+        <button class="button" onclick="concatDigits('6')">6</button>
+        <button class="button" onclick="changeToSub()">&minus;</button>
+        <button class="button" onclick="concatDigits('1')">1</button>
+        <button class="button" onclick="concatDigits('2')">2</button>
+        <button class="button" onclick="concatDigits('3')">3</button>
+        <button class="button" onclick="changeToSum()">&plus;</button>
+        <button class="button" onclick="concatDigits('0')">0</button>
+        <button class="button" onclick="concatDigits('.')">.</button>
+        <button class="button">C</button>
+        <button class="button" onclick="result()">=</button>
       </div>
-    <!--
-<div id="container">
-    <div class="result">
-        0
-    </div>
-    <div>
-        <input type="button" value="7">
-        <input type="button" value="8">
-        <input type="button" value="9">
-        <input type="button" value="X">
-    </div>
-    <div>
-        <input type="button" value="4">
-        <input type="button" value="5">
-        <input type="button" value="6">
-        <input type="button" value="-">
-    </div>
-    <div>
-        <input type="button" value="1">
-        <input type="button" value="2">
-        <input type="button" value="3">
-        <input type="button" value="+">
-    </div>
-    <div>
-        <input type="button" value="0">
-        <input type="button" value=",">
-        <input type="button" value="=">
-        <input type="button" value="C">
-    </div>
-</div>
--->
 </body>
 <script src="script.js"></script>
 </html>
