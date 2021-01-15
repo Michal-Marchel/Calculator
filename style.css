@@ -19,18 +19,20 @@ h1 {
       margin-right: 30%;
   }
   
-  .result2 {
+.result2 {
        grid-area: result2; 
        text-align: right;
     }
-  .Result { 
+
+.Result { 
     grid-area: Result;
     text-align: right;
 }
-.A\\\/C { grid-area: A\\\/C; }
-.\\\+\\\/- { grid-area: \\\+\\\/-; }
-.\\\% { grid-area: \\\%; }
-.\\\/ { grid-area: \\\/; }
+
+.cero { grid-area: 3 / 1 / 4 / 3; }
+
+
+
   
   
   
