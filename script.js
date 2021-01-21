@@ -1,175 +1,86 @@
-let inputValue = document.getElementById("inputValue");
-let botones = document.getElementsByClassName("button");
+let input = document.getElementById("inputValue");
 let display = document.getElementById("topDiv");
-let number1 = "";
-let number2 = "";
-let op = "";
+let op = identity;
 
 //Sum of two arguments.
 function add(a, b) {
-    return a + b;
+    return b + a;
 }
 
-
 function substract(a, b) {
-    return a - b;
+    return b - a;
 }
 
 function multiply(a, b) {
-    return a * b;
+    return b * a;
 }
 
 function divide(a, b) {
-    return a / b;
-}
-// Takes 3 arguments (left digit, right digit, function), entablish inputValue.value as the result of the function over both digits.
-function operate(left, right, operation) {
-    display.innerHTML = operation(left, right);
+    return b / a;
 }
 
 //Concat string
 function concatDigits(digito) {
-    inputValue.innerHTML = number1 += digito;
-}
-
-
-
-function changeToSum() {
-    op = add;
-    display.innerHTML = number1;
-    number2 = number1;
-    number1 = "";
-    inputValue.innerHTML = "";
-}
-function getIdentity(operation) {
-    if (operation == divide || operation == multiply) {
-        return 1;
-    } else if (operation == add || operation == substract) {
-        return 0;
+    if (!input.value) {
+        input.value = "";
+        input.innerHTML = input.value += digito;
+    } else {
+        input.innerHTML = input.value += digito;
     }
 }
 
+function clearInfo() {
+    op = identity;
+    input.innerHTML = "0";
+    input.value = "";
+    display.innerHTML = "";
+    display.value = "";
+}
+
+
+function sign {
+
+}
+
+function operate(operator) {
+    if (input.value == "") {
+        op = operator;
+    } else {
+        display.value = op(parseFloat(input.value), parseFloat(display.value));
+        display.innerHTML = display.value;
+        input.value = "";
+        input.innerHTML = "";
+    }
+    op = operator;
+}
+
+function identity(x) {
+    return x = isNaN(x) ? 0 : x;
+}
+
 function result() {
-    //Si number2 es null, coger valor identidad. getIdentity(op) 
-    val1 = parseFloat(number1);
-    val2 = number2 == "" ? val1 : parseFloat(number2);
-    
+    if (input.value == "") {
+        op = identity;
+        display.value = op(display.value);
+    } else {
+        display.value = op(parseFloat(input.value), parseFloat(display.value));
+        display.innerHTML = display.value;
+        input.value = "";
+        input.innerHTML = "";
+    }
+
+    /*
+    val1 = parseFloat(number2);
+    // if second arg not provided getIdentity depending on the operation
+    val2 = number1 == "" ? getIdentity(op) : parseFloat(number1);
+    alert("val1: " + val1 + "\nval2: " + val2 + "\noperation: " + op);
+    // if second arg not provided use the same value as the first arg. (like MAC calculator)
+    //val2 = number1 == "" ? val1 : parseFloat(number1);
+     alert("val1: " + val1 + "\nval2: " + val2 + "\noperation: " + op);
 
     operate(val2, val1, op);
     number1 = "";
     number2 = "";
     inputValue.innerHTML = "";
+    */
 }
-
-function changeToSub() {
-    op = substract;
-    display.innerHTML = number1;
-    number2 = number1;
-    number1 = "";
-    inputValue.innerHTML = "";
-}
-
-function changeToDivide() {
-    op = divide;
-    display.innerHTML = number1;
-    number2 = number1;
-    number1 = "";
-    inputValue.innerHTML = "";
-}
-
-function changeToMultiply() {
-    op = multiply;
-    display.innerHTML = number1;
-    number2 = number1;
-    number1 = "";
-    inputValue.innerHTML = "";
-}
-function clearInfo() {
-    op = "";
-    number = "";
-    number2 = "";
-    inputValue.innerHTML = "";
-    display.innerHTML = "";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
