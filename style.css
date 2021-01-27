@@ -9,6 +9,7 @@ h1 {
     gap: 2px 2px;
     grid-template-areas:
       "result2 result2 result2 result2"
+      "symbol symbol symbol symbol"
       "Result Result Result Result"
       "number number number number"
       "number number number number"
@@ -26,6 +27,11 @@ h1 {
 
 .Result { 
     grid-area: Result;
+    text-align: right;
+}
+
+.symbol {
+    grid-area: symbol;
     text-align: right;
 }
 

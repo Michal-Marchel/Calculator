@@ -11,8 +11,9 @@
     <div class="grid-container">
         <div id="topDiv" class="result2"></div>
         <div value = "" id="inputValue" class="Result">0</div>
+        <div class ="symbol" id="symbol" ></div>
         <button class="button" onclick="clearInfo()">A/C</button>
-        <button class="button" >+/-</button>
+        <button class="button" onclick="backspace()">backspace</button>
         <button class="button">%</button>
         <button class="button" onclick="operate(divide)">/</button>
         <button class="button" onclick="concatDigits('7')">7</button>
@@ -28,7 +29,7 @@
         <button class="button" onclick="concatDigits('3')">3</button>
         <button class="button" onclick="operate(add)">&plus;</button>
         <button class="button" onclick="concatDigits('0')">0</button>
-        <button class="button" onclick="concatDigits('.')">.</button>
+        <button class="button" id="decimalBtn" onclick="concatDigits('.'), disableBtn()">.</button>
         <button class="button" onclick="result()">=</button>
         
 
