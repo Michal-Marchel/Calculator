@@ -1,12 +1,17 @@
+:root{
+    background: cadetblue;
+}
+
 h1 {
     text-align: center;
+    padding-top: 50px;
 }
 
 .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-    gap: 2px 2px;
+    gap: 1px 1px;
     grid-template-areas:
       "result2 result2 result2 result2"
       "symbol symbol symbol symbol"
@@ -16,8 +21,11 @@ h1 {
       "number number number number"
       "number number number number"
       "number number number number";
-      margin-left: 30%;
-      margin-right: 30%;
+    margin-left: 40%;
+    margin-right: 40%;
+    border: 1px solid black ;
+    border-radius: 5px;
+    
   }
   
 .result2 {
@@ -36,6 +44,10 @@ h1 {
 }
 
 .cero { grid-area: 3 / 1 / 4 / 3; }
+
+
+
+
 
 
 

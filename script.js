@@ -3,6 +3,7 @@ let display = document.getElementById("topDiv");
 let op = identity;
 let decimalBtn = document.getElementById("decimalBtn");
 let symbol = document.getElementById("symbol");
+let backsp = document.getElementById("backspace");
 input.value = "";
 
 //Sum of two arguments.
@@ -100,20 +101,6 @@ function printSymbol(operator) {
     }
 
 }
-    /*
-    val1 = parseFloat(number2);
-    // if second arg not provided getIdentity depending on the operation
-    val2 = number1 == "" ? getIdentity(op) : parseFloat(number1);
-    alert("val1: " + val1 + "\nval2: " + val2 + "\noperation: " + op);
-    // if second arg not provided use the same value as the first arg. (like MAC calculator)
-    //val2 = number1 == "" ? val1 : parseFloat(number1);
-     alert("val1: " + val1 + "\nval2: " + val2 + "\noperation: " + op);
-
-    operate(val2, val1, op);
-    number1 = "";
-    number2 = "";
-    inputValue.innerHTML = "";
-    */
 
 
 function backspace() {
@@ -134,7 +121,35 @@ function disableBtn() {
     decimalBtn.disabled = true;
 }
 
+//Keyboard support
+document.addEventListener('keydown', (event) => {
+	
+	let getOperators = {
+		'/': 'divide',
+		'x': 'multiply',
+		'*': 'multiply',
+		'%': 'remainder',
+		'+': 'plus',
+		'-': 'minus'
+	}
 
-function sum (a, b) {
-    
-}
+	if(!isNaN(event.key) && event.key !== ' '){
+		document.getElementById(`digit-${event.key}`).click();
+	}
+	if (['/', 'x', '+', '-', '*', '%'].includes(event.key)) {
+		document.getElementById(getOperators[event.key]).click();
+	}
+	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {
+        //document.getElementById('backspace').click();	
+        backsp.click();
+    }
+    if (event.key ==='c' ) {
+        document.getElementById('clearAll').click();	
+	}
+	if (event.key === '=' || event.key === 'Enter') {
+		document.getElementById('equals').click();	
+	}
+	if (event.key === '.') {
+		document.getElementById('decimalBtn').click();	
+	}
+});
