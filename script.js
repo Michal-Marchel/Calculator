@@ -139,8 +139,7 @@ document.addEventListener('keydown', (event) => {
 	if (['/', 'x', '+', '-', '*', '%'].includes(event.key)) {
 		document.getElementById(getOperators[event.key]).click();
 	}
-	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {
-        //document.getElementById('backspace').click();	
+	if (event.key === 'Backspace' || event.key ==='c' || event.key === 'C') {	
         backsp.click();
     }
     if (event.key ==='c' ) {

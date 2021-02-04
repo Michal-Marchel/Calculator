@@ -12,28 +12,29 @@
         <div id="topDiv" class="result2"></div>
         <div value = "" id="inputValue" class="Result">0</div>
         <div class ="symbol" id="symbol" ></div>
-        <button class="button" onclick="clearInfo()" id="clearAll">A/C</button>
-        <button class="button" onclick="backspace()" id="backspace">C</button>
-        <button class="button">%</button>
-        <button class="button" id="divide" onclick="operate(divide)">/</button>
+        <button class="button-AC" onclick="clearInfo()" id="clearAll">A/C</button>
+        <button class="button-C" onclick="backspace()" id="backspace">C</button>
+        <button class="button-p">%</button>
+        <button class="operator" id="divide" onclick="operate(divide)">/</button>
         <button class="button" id="digit-7" onclick="concatDigits('7')">7</button>
         <button class="button" id="digit-8" onclick="concatDigits('8')">8</button>
         <button class="button" id="digit-9" onclick="concatDigits('9')">9</button>
-        <button class="button" id="multiply" onclick="operate(multiply)">x</button>
+        <button class="operator" id="multiply" onclick="operate(multiply)">x</button>
         <button class="button" id="digit-4" onclick="concatDigits('4')">4</button>
         <button class="button" id="digit-5" onclick="concatDigits('5')">5</button>
         <button class="button" id="digit-6" onclick="concatDigits('6')">6</button>
-        <button class="button" id="minus" onclick="operate(substract)">&minus;</button>
+        <button class="operator" id="minus" onclick="operate(substract)">&minus;</button>
         <button class="button" id="digit-1" onclick="concatDigits('1')">1</button>
         <button class="button" id="digit-2" onclick="concatDigits('2')">2</button>
         <button class="button" id="digit-3" onclick="concatDigits('3')">3</button>
-        <button class="button" id="plus" onclick="operate(add)">&plus;</button>
-        <button class="button" id="digit-0" onclick="concatDigits('0')">0</button>
+        <button class="operator" id="plus" onclick="operate(add)">&plus;</button>
+        <button class="button-0" id="digit-0" onclick="concatDigits('0')">0</button>
         <button class="button" id="decimalBtn" onclick="concatDigits('.'), disableBtn()">.</button>
-        <button class="button" id="equals" onclick="result()">=</button>
+        <button class="operator" id="equals" onclick="result()">=</button>
         
 
       </div>
 </body>
 <script src="script.js"></script>
 </html>
+
